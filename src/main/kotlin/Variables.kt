@@ -3,7 +3,7 @@ package main.kotlin
 import java.util.Locale
 
 fun main() {
-    var userName: String = "Manuel Morales"
+    var userName = "Manuel Morales"
     var age: Int = 35
     val country : String = Locale.getDefault().displayCountry
 
