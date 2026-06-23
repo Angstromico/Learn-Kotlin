@@ -5,4 +5,9 @@ fun main() {
     var age: Int = 35
 
     println("The user $userName has the age $age")
+
+    userName = "Jose Pacheco"
+    age = 30
+
+    println("The user $userName is $age")
 }
