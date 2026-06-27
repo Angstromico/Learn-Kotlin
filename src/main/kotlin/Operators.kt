@@ -42,4 +42,55 @@ fun main() {
      */
     val precedence3 = sum - x * y % 3
     println("Result of 'sum - x * y % 3' is: $precedence3") // Prints 12
+
+    //Increase and decrease
+    println("\n--- Increase and Decrease Examples ---")
+
+    var number = 8
+    number = number + 2  // Standard reassignment
+    number += 1          // Augmented assignment shortcut (equivalent to number = number + 1)
+
+    println("Initially number is 8 but now is $number") // Prints 11
+
+    /* * Example 4: Decrement Assignment Shortcut (-=)
+     * It subtracts a value from the variable and saves it back instantly.
+     * Works exactly like += but for subtraction.
+     */
+    number -= 3 // Equivalent to: number = number - 3 (11 - 3)
+    println("After number -= 3, the value is: $number") // Prints 8
+
+    /* * Example 5: Postfix Increment (number++) vs Prefix Increment (++number)
+     * This is highly important for operator precedence!
+     * * Postfix (number++): Evaluates the current expression FIRST, then increments the variable.
+     * Prefix (++number): Increments the variable FIRST, then evaluates the expression.
+     */
+    println("\n--- Postfix vs Prefix Breakdown ---")
+
+    // Resetting number to 10 for clean math
+    number = 10
+
+    /* Postfix Example:
+     * 1. Kotlin passes the current value (10) to the println function.
+     * 2. Right after printing, 'number' is incremented to 11 in memory.
+     */
+    println("Using postfix (number++): ${number++}") // Prints 10, but 'number' becomes 11 right after
+    println("The value in memory is now: $number")    // Prints 11
+
+    /* Prefix Example:
+     * 1. 'number' is instantly incremented in memory from 11 to 12.
+     * 2. Kotlin then passes that new value (12) to the println function.
+     */
+    println("Using prefix (++number): ${++number}") // Increments to 12 first, then prints 12
+
+    /* * Example 6: Multiplicative Assignment Shortcuts (*=, /=)
+     * You can use these to quickly multiply or divide a variable in place.
+     */
+    println("\n--- Multiplicative Shortcuts ---")
+    var multiplier = 4
+    multiplier *= 2 // Equivalent to: multiplier = multiplier * 2 (4 * 2)
+    println("After multiplier *= 2: $multiplier") // Prints 8
+
+    var divider = 20
+    divider /= 5 // Equivalent to: divider = divider / 5 (20 / 5)
+    println("After divider /= 5: $divider") // Prints 4
 }
