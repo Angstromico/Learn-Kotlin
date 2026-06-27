@@ -173,9 +173,7 @@ fun main() {
     println("\n--- Text from boolean ---")
 
     val condition = false
-    val text = if(condition) {
-        "Is real"
-    } else "Is false"
+    val text = if(condition) "Is real" else "Is false"
 
     println(text)
 }
