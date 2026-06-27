@@ -168,4 +168,14 @@ fun main() {
      */
     val mixedLogical = (x > y) && isSunny || hasCard
     println("Result of mixed logical precedence: $mixedLogical") // Prints true
+
+    // --- New Section: Text from boolean ---
+    println("\n--- Text from boolean ---")
+
+    val condition = false
+    val text = if(condition) {
+        "Is real"
+    } else "Is false"
+
+    println(text)
 }
