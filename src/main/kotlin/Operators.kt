@@ -93,4 +93,41 @@ fun main() {
     var divider = 20
     divider /= 5 // Equivalent to: divider = divider / 5 (20 / 5)
     println("After divider /= 5: $divider") // Prints 4
+
+    // --- New Section: Comparison Operators ---
+    println("\n--- Comparison Operators Examples ---")
+
+    /* * Example 7: Relational Comparisons (>, <, >=, <=)
+     * These compare numbers and return a Boolean (true or false).
+     * Note: In operator precedence, math operations (+, -, *, /) are executed
+     * BEFORE comparison operators.
+     */
+    val isGreater = x > y  // Is 5 greater than 8?
+    val isLess = x < y     // Is 5 less than 8?
+
+    println("Is x > y? $isGreater") // Prints false
+    println("Is x < y? $isLess")    // Prints true
+
+    // Mixing math operations with comparisons:
+    // 1. Math runs first: x + 4 evaluation yields 9
+    // 2. Comparison runs last: Is 9 greater than or equal to y (8)?
+    val isGreaterOrEqual = (x + 4) >= y
+    println("Is (x + 4) >= y? $isGreaterOrEqual") // Prints true because 9 >= 8
+
+    val isLessOrEqual = x <= 5 // Is 5 less than or equal to 5?
+    println("Is x <= 5? $isLessOrEqual") // Prints true
+
+    /* * Example 8: Equality and Inequality Operators (==, !=)
+     * == checks if two values are structurally equal.
+     * != checks if two values are NOT equal.
+     */
+    val isEqual = x == y  // Is 5 equal to 8?
+    val isNotEqual = x != y  // Is 5 not equal to 8?
+
+    println("Is x == y? $isEqual")    // Prints false
+    println("Is x != y? $isNotEqual") // Prints true
+
+    // Testing equality directly with values
+    val conditionCheck = (x * 2) == 10 // Does 5 * 2 equal 10?
+    println("Result of (x * 2) == 10 is: $conditionCheck") // Prints true
 }
