@@ -130,4 +130,42 @@ fun main() {
     // Testing equality directly with values
     val conditionCheck = (x * 2) == 10 // Does 5 * 2 equal 10?
     println("Result of (x * 2) == 10 is: $conditionCheck") // Prints true
+
+    // --- New Section: Logical Operators ---
+    println("\n--- Logical Operators Examples ---")
+
+    /* * Example 9: The Logical AND Operator (&&)
+     * Returns true ONLY if both sides evaluate to true.
+     */
+    val isSunny = true
+    val isWarm = false
+
+    // true && false evaluates to false
+    val goGroupHiking = isSunny && isWarm
+    println("Will we go hiking? (AND check): $goGroupHiking") // Prints false
+
+    // Mixing comparisons with logical operators
+    // Math and comparisons happen BEFORE logical operations.
+    // (5 < 8) is true AND (5 == 5) is true -> true && true
+    val complexAnd = (x < y) && (x == 5)
+    println("Result of '(x < y) && (x == 5)': $complexAnd") // Prints true
+
+    /* * Example 10: The Logical OR Operator (||)
+     * Returns true if at least ONE of the conditions is true.
+     */
+    val hasCash = false
+    val hasCard = true
+
+    // false || true evaluates to true
+    val canBuyCoffee = hasCash || hasCard
+    println("Can I buy coffee? (OR check): $canBuyCoffee") // Prints true
+
+    /* * Operator Precedence Hint:
+     * In Kotlin, the Logical AND (&&) has a higher precedence than Logical OR (||).
+     * Execution order below:
+     * 1. (x > y) && isSunny is evaluated first -> (false && true) = false
+     * 2. Then, that result is OR'd with hasCard -> false || true = true
+     */
+    val mixedLogical = (x > y) && isSunny || hasCard
+    println("Result of mixed logical precedence: $mixedLogical") // Prints true
 }
