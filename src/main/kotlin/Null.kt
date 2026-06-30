@@ -7,6 +7,6 @@ fun main() {
     val name: String? = "Name"
 
     if(name?.length != 0 || name != null) {
-        println(name)
+        println(name?.length)
     }
 }
