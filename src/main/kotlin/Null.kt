@@ -17,5 +17,8 @@ fun main() {
     println(name2?.length)
 
     var name3: String? = null
-    println(name3!!.length) //This is through and exception
+    //println(name3!!.length) //This is through and exception
+
+    val name4: String = name3 ?: "Maria"
+    println(name4.length)
 }
