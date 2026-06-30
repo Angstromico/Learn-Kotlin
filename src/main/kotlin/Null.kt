@@ -11,4 +11,11 @@ fun main() {
     } else {
         println("The variable name is null")
     }
+
+    var name2: String? = "Second"
+    name2 = null
+    println(name2?.length)
+
+    var name3: String? = null
+    println(name3!!.length) //This is through and exception
 }
