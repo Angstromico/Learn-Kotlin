@@ -2,6 +2,7 @@ package main.kotlin
 
 fun main() {
     println(salutations())
+    println(messageNamed(message = "Xmas"))
     val numbers = listOf(1, 2, 3, 4, 5)
     val greaterNumber = getMaxOfArr(numbers)
 
@@ -10,6 +11,10 @@ fun main() {
 
 fun salutations(name: String = "Manuel"): String {
     return "Hello $name"
+}
+
+fun messageNamed(name: String = "Sam", message: String = "Hello"): String {
+    return "Hello $name the message is $message"
 }
 
 fun getMaxOfArr(numbers: List<Int>): Int {
