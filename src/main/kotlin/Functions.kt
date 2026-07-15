@@ -1,14 +1,14 @@
 package main.kotlin
 
 fun main() {
-    println(salutations("Manuel"))
+    println(salutations())
     val numbers = listOf(1, 2, 3, 4, 5)
     val greaterNumber = getMaxOfArr(numbers)
 
     println("The grater number of the list $numbers is $greaterNumber")
 }
 
-fun salutations(name: String): String {
+fun salutations(name: String = "Manuel"): String {
     return "Hello $name"
 }
 
