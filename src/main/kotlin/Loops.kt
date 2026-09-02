@@ -15,6 +15,11 @@ fun main() {
     for (page in booklet) {
         println("Reading page $page")
     }
+
+    val booklet2 = Booklet(2)
+    for (page in booklet2) {
+        println("Reading page $page")
+    }
 }
 
 fun <T> printCollection(vararg collection: T) {
@@ -66,6 +71,24 @@ class Booklet(val totalPages: Int) : Iterable<Int> {
             var current = 1
             override fun hasNext() = current <= totalPages
             override fun next() = current++
+        }
+    }
+}
+
+// Class iterator alternative
+
+class Booklet2(val totalPages: Int) {
+    operator fun iterator(): Iterator<Int> {
+        return object {
+            var current = 1
+
+            operator fun hasNext() = current <= totalPages
+            operator fun next() = current++
+        }.let {
+            object : Iterator<Int> {
+                override fun hasNext() = it.hasNext()
+                override fun next() = it.next()
+            }
         }
     }
 }
