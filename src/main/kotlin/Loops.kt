@@ -28,4 +28,15 @@ fun iterateInRange(init: Int, end: Int) {
     for (i in init..end) {
         print(i)
     }
+    println()
+    println("\nOpen-ended range:")
+    for (i in init..< end) {
+        print(i)
+    }
+    println()
+    println("\nReverse order in steps of 2:")
+    for (i in end downTo init step 2) {
+        print(i)
+    }
+    println()
 }
