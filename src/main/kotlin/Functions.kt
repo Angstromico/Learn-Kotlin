@@ -12,7 +12,7 @@ fun main() {
     println("The summatory is $summatory")
 }
 
-fun salutations(name: String = "Manuel") = "Hello $name"
+fun salutations(name: String = "Manuel"): String = "Hello $name"
 
 
 fun messageNamed(name: String = "Sam", message: String = "Hello"): String {
