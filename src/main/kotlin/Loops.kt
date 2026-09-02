@@ -8,6 +8,8 @@ fun main() {
 
     iterateInRange(1,6)
     iterateInRange(6,1)
+
+    iterateWithIndex(5, "Five")
 }
 
 fun <T> printCollection(vararg collection: T) {
@@ -39,4 +41,10 @@ fun iterateInRange(init: Int, end: Int) {
         print(i)
     }
     println()
+}
+
+fun <T> iterateWithIndex(vararg collection: T) {
+    for(i in collection.indices) {
+        println("Element at index $i is ${collection[i]}")
+    }
 }
