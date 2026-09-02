@@ -47,4 +47,8 @@ fun <T> iterateWithIndex(vararg collection: T) {
     for(i in collection.indices) {
         println("Element at index $i is ${collection[i]}")
     }
+    //Alternative
+    for ((index, value) in collection.withIndex()) {
+        println("The step at $index is \"$value\"")
+    }
 }
