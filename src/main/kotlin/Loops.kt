@@ -10,6 +10,11 @@ fun main() {
     iterateInRange(6,1)
 
     iterateWithIndex(5, "Five")
+
+    val booklet = Booklet(3)
+    for (page in booklet) {
+        println("Reading page $page")
+    }
 }
 
 fun <T> printCollection(vararg collection: T) {
@@ -52,3 +57,16 @@ fun <T> iterateWithIndex(vararg collection: T) {
         println("The step at $index is \"$value\"")
     }
 }
+
+// Class iterator
+
+class Booklet(val totalPages: Int) : Iterable<Int> {
+    override fun iterator(): Iterator<Int> {
+        return object : Iterator<Int> {
+            var current = 1
+            override fun hasNext() = current <= totalPages
+            override fun next() = current++
+        }
+    }
+}
+
