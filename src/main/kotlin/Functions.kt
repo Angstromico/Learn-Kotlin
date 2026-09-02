@@ -7,6 +7,9 @@ fun main() {
     val greaterNumber = getMaxOfArr(numbers)
 
     println("The grater number of the list $numbers is $greaterNumber")
+
+    val summatory = sum(1, 2,3 )
+    println("The summatory is $summatory")
 }
 
 fun salutations(name: String = "Manuel"): String {
@@ -26,4 +29,8 @@ fun getMaxOfArr(numbers: List<Int>): Int {
     }
 
     return max
+}
+
+fun sum(vararg numbers: Int): Int {
+    return numbers.sum()
 }
