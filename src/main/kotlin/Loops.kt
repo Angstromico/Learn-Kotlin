@@ -26,6 +26,6 @@ fun iterateInRange(init: Int, end: Int) {
 
     println("Closed-ended range:")
     for (i in init..end) {
-        println(i)
+        print(i)
     }
 }
